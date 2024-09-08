@@ -1,0 +1,173 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: #282c34; /* Cor de fundo da página */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+}
+
+/* Estiliza a barra azul fixa no topo */
+header {
+    background-color: #1f77b4; /* Cor de fundo da barra */
+    color: #F5F7F8; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: fixed; /* Fixa no topo */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha ao lado esquerdo da página */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    z-index: 1000; /* Garante que esteja acima de outros elementos */
+}
+
+/* Estiliza o conteúdo principal da página */
+main {
+    margin-top: 5rem; /* Espaçamento abaixo da barra */
+    width: 100%; /* Largura total da página */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 2.5rem; /* Tamanho ajustado da fonte */
+    color: #222831; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    letter-spacing: 0.2rem; /* Espaçamento entre letras */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 20rem; /* Largura dos inputs */
+    border: none; /* Remove a borda padrão */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 1.5rem; /* Borda arredondada */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+    color: #000; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #f5a623; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 50rem; /* Largura máxima da caixa de resultados */
+    height: 50vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+    background-color: #ffffff; /* Cor de fundo da caixa de resultados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estiliza a estrutura dos cards */
+.container {
+    display: grid; /* Usa Grid para layout */
+    grid-template-columns: repeat(5, 1fr); /* Define 5 colunas */
+    gap: 1rem; /* Espaçamento entre os cards */
+    width: 100%; /* Largura total da página */
+    max-width: 100rem; /* Largura máxima dos cards */
+    margin: 2rem 0; /* Espaçamento acima e abaixo dos cards */
+    justify-items: center; /* Centraliza os cards dentro da grid */
+}
+
+/* Estiliza cada card */
+.card {
+    background: #ffffff; /* Cor de fundo dos cards */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1.5rem; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para animações */
+    position: relative; /* Necessário para animação e posicionamento interno */
+    max-width: 12rem; /* Largura máxima do card */
+}
+
+/* Adiciona animação de crescimento ao passar o mouse sobre o card */
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Estiliza o card de Descrição e Título */
+.card-descricao {
+    background-color: #f0f8ff; /* Cor de fundo do card */
+}
+
+/* Estiliza o título dentro do card */
+.card-descricao .titulo {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #1e3a8a; /* Cor do texto */
+    margin-bottom: 0.5rem; /* Margem abaixo do título */
+}
+
+/* Estiliza a descrição dentro do card */
+.card-descricao .descricao {
+    color: #333333; /* Cor do texto */
+}
+
+/* Estiliza o card de Desempenho */
+.card-desempenho {
+    background-color: #e0f2f1; /* Cor de fundo do card */
+}
+
+/* Estiliza o desempenho dentro do card */
+.card-desempenho .desempenho {
+    color: #333333; /* Cor do texto */
+}
+
+/* Estiliza o card de Olá Mundo */
+.card-ola-mundo {
+  background-color: #e3f2fd; /* Cor de fundo do card */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  padding: 1.2rem; /* Espaçamento interno */
+  max-width: 100%; /* Largura máxima do card */
+  min-height: 10rem; /* Altura mínima do card */
+  border-radius: 0.6rem; /* Borda arredondada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: auto; /* Adiciona rolagem se necessário */
+  display: flex; /* Usa Flexbox para layout interno */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: flex-start; /* Alinha o conteúdo ao início */
+}
+
+/* Estiliza o conteúdo do card "Olá Mundo" */
+.card-ola-mundo .ola-mundo-conteudo {
+  text-align: left; /* Alinha o texto à esquerda */
+  white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+  word-wrap: break-word; /* Quebra palavras longas para caber no card */
+  width: 100%; /* Largura total para o conteúdo */
+}
+
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #f5f7f8; /* Cor de fundo do rodapé */
+    color: #333333; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1rem; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: fixed; /* Fixa o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+}
